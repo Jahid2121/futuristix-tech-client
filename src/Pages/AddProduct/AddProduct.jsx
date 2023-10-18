@@ -1,4 +1,5 @@
 import React from "react";
+import Navbar from "../../Shared/Navbar";
 
 const AddProduct = () => {
   const handleAddProduct = e => {
@@ -13,9 +14,23 @@ const AddProduct = () => {
     const image = form.image.value
     const newProduct = {productName, brandName, type, price, description, ratings, image}
     console.log(newProduct);
+
+    fetch('http://localhost:5000/products', {
+      method: 'POST',
+      headers: {
+        'content-type': 'application/json'
+      },
+      body: JSON.stringify(newProduct)
+    })
+    .then(res => res.json())
+    .then(data => {
+      console.log(data);
+    })
   }
 
   return (
+    <>
+    <Navbar></Navbar>
     <div style={{backgroundImage: "url('https://i.ibb.co/khyLmT4/background-2426328.jpg')"}} className="bg-cover pb-8">
       <h2 className="text-center text-3xl pt-24 text-white font-bold">Add a Product</h2>
       <form onSubmit={handleAddProduct}>
@@ -123,10 +138,11 @@ const AddProduct = () => {
         <input
           type="submit"
           value="Add Product"
-          className="text-center bg-slate-400 px-16 btn-block  flex mx-auto btn my-3"
+          className="text-center text-white bg-blue-600 border-0 px-16 btn-block  flex mx-auto btn my-3"
         />
       </form>
     </div>
+    </>
   );
 };
 
