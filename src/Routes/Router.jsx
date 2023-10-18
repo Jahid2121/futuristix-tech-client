@@ -6,6 +6,7 @@ import Root from "../layOuts/Root";
 import Home from "../Pages/Home/Home";
 import AddProduct from "../Pages/AddProduct/AddProduct";
 import UpdateProduct from "../Pages/UpdateProduct/UpdateProduct";
+import SignUp from "../Pages/SignUp/SignUp";
 
 
 const router = createBrowserRouter([
@@ -28,6 +29,10 @@ const router = createBrowserRouter([
         {
             path: '/updateProduct',
             element: <UpdateProduct></UpdateProduct>
+        },
+        {
+            path: '/signUp',
+            element: <SignUp></SignUp>
         },
       ]
     },
