@@ -45,7 +45,7 @@ const SignUp = () => {
       <h2 className="text-white text-3xl font-bold text-center mb-9">Welcome</h2>
 
       <form style={{backdropFilter: 'blur(3px)'}}  onSubmit={handleLogin} className="card-body rounded-xl  border-2 w-[400px] mx-auto ">
-        <h2 className="text-white text-3xl font-bold   text-center">Sign Up</h2>
+        <h2 className="text-white text-3xl font-bold text-center">Sign Up</h2>
         <hr />
         <div className="form-control ">
           <label className="label">
@@ -84,9 +84,12 @@ const SignUp = () => {
           </div>
         </div>
         <div className="form-control mt-6">
-          <button className="btn bg-slate-400">Login</button>
+          <button className="btn bg-slate-400 rounded-3xl">Sign Up</button>
         </div>
       </form>
+      <div className="flex">
+      <button className="text-center border p-2 glass rounded-full px-12 mx-auto text-2xl flex my-6 justify-center text-white">Login</button>
+      </div>
       {
       error && <p className='text-red-950 flex items-center'>{error}</p>
       }
