@@ -1,8 +1,10 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Brand = ({product}) => {
-    const {brand_name, image} = product
+    const {id,brand_name, image} = product
     return (
+        <Link to={`/brandDetails/${brand_name}`}>
         <div>
             <div className="card  glass">
         <figure>
@@ -16,6 +18,7 @@ const Brand = ({product}) => {
         </div>
       </div>
         </div>
+        </Link>
     );
 };
 
