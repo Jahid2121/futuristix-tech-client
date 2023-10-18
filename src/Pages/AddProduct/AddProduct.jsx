@@ -1,5 +1,6 @@
 import React from "react";
 import Navbar from "../../Shared/Navbar";
+import Swal from "sweetalert2";
 
 const AddProduct = () => {
   const handleAddProduct = e => {
@@ -25,6 +26,13 @@ const AddProduct = () => {
     .then(res => res.json())
     .then(data => {
       console.log(data);
+      if(data.insertedId){
+        Swal.fire({
+          title: 'Success!',
+          text: 'Product added Successfully',
+          icon: 'success',
+        })
+      }
     })
   }
 
