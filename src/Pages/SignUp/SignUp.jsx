@@ -83,19 +83,21 @@ const SignUp = () => {
             </label>
           </div>
         </div>
-        <div className="form-control mt-6">
-          <button className="btn bg-slate-400 rounded-3xl">Sign Up</button>
-        </div>
-      </form>
-      <div className="flex">
-      <button className="text-center border p-2 glass rounded-full px-12 mx-auto text-2xl flex my-6 justify-center text-white">Login</button>
-      </div>
-      {
+        {
       error && <p className='text-red-950 flex items-center'>{error}</p>
       }
       {
         success && <p className='text-green-800'>{success}</p>
       }
+        <div className="form-control mt-6">
+          <button className="btn bg-slate-400 rounded-3xl">Sign Up</button>
+        </div>
+        
+      </form>
+      <div className="flex">
+      <button  className="text-center border p-2 glass rounded-full px-12 mx-auto text-2xl flex my-6 justify-center text-white">Login</button>
+      </div>
+      
 
     </div>
   );
