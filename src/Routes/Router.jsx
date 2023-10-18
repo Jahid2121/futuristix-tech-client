@@ -1,4 +1,5 @@
 import {
+    Navigate,
     createBrowserRouter,
   } from "react-router-dom";
 import Root from "../layOuts/Root";
@@ -14,10 +15,14 @@ const router = createBrowserRouter([
       children: [
         {
             path: '/',
+            element: <Navigate to="/home" replace />
+        },
+        {
+            path: '/home',
             element: <Home></Home>
         },
         {
-            path: '/addProduct',
+            path: '/add Product',
             element: <AddProduct></AddProduct>
         },
         {
