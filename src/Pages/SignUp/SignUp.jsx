@@ -2,6 +2,8 @@ import React, { useContext, useState } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
 
 const SignUp = () => {
+  const [error, setError] = useState()
+    const [success, setSuccess] = useState()
  
   const {createUser} = useContext(AuthContext)
   const handleLogin = e => {
@@ -10,8 +12,24 @@ const SignUp = () => {
     const email = form.email.value;
     const password = form.password.value;
     console.log(email, password);
+    
+    setError('')
+    setSuccess('')
 
-   
+    
+    
+    if(password.length < 6){
+      setError('password must be at least 6 characters')
+    return
+    }
+    else if(!/[A-Z]/.test(password)){
+      setError('Your password should have at least one Uppercase letter')
+      return
+    }
+    else if(!/[!@#$%^&*(),.?":{}|<>]/.test(password)){
+      setError('Must have a special character')
+      return
+    }
 
     createUser(email, password)
     .then(result => {
@@ -19,6 +37,7 @@ const SignUp = () => {
     } )
     .catch(error => {
       console.error(error);
+      setError(error.message)
     })
   }
   return (
@@ -65,6 +84,13 @@ const SignUp = () => {
           <button className="btn btn-primary">Login</button>
         </div>
       </form>
+      {
+      error && <p className='text-red-950 flex items-center'>{error}</p>
+      }
+      {
+        success && <p className='text-green-800'>{success}</p>
+      }
+
     </div>
   );
 };
