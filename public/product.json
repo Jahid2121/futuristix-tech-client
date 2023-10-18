@@ -1,0 +1,36 @@
+[
+    {
+        "id": 1,
+        "brand_name": "Xiaomi",
+        "image": "https://i.ibb.co/NnWp4WD/icons8-xiaomi-480.png"
+    },
+    {
+        "id": 2,
+        "brand_name": "Samsung",
+        "image": "https://i.ibb.co/xff5vNn/icons8-samsung-480.png"
+    },
+    {
+        "id": 3,
+        "brand_name": "HP",
+        "image": "https://i.ibb.co/XsWfFQH/icons8-hp-480.png"
+    },
+    {
+        "id": 4,
+        "brand_name": "Asus",
+        "image": "https://i.ibb.co/QvHFJqL/icons8-asus-512.png"
+    },
+    {
+        "id": 5,
+        "brand_name": "Apple",
+        "image": "https://i.ibb.co/JkDp9rn/icons8-apple-500.png"
+    },
+    {
+        "id": 6,
+        "brand_name": "Lenovo",
+        "image": "https://i.ibb.co/BycgWzz/icons8-lenovo-480.png"
+    }
+]
+
+
+
+
