@@ -2,8 +2,8 @@ import React, { useContext, useState } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
 
 const SignUp = () => {
-  const [error, setError] = useState()
-    const [success, setSuccess] = useState()
+  const [error, setError] = useState('')
+    const [success, setSuccess] = useState('')
  
   const {createUser} = useContext(AuthContext)
   const handleLogin = e => {
@@ -41,9 +41,9 @@ const SignUp = () => {
     })
   }
   return (
-    <div>
+    <div className="bg-cover  bg-center min-h-screen glass bg-transparent" style={{backgroundImage: "url('https://i.ibb.co/cvTpZrk/fabio-oy-Xis2k-ALVg-unsplash.jpg')"}}>
 
-      <form onSubmit={handleLogin} className="card-body">
+      <form  onSubmit={handleLogin} className="card-body border-2 w-[400px] mx-auto ">
         <div className="form-control">
           <label className="label">
             <span className="label-text">Email</span>
