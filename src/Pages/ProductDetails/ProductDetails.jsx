@@ -1,5 +1,6 @@
 import React from "react";
 import { useLoaderData } from "react-router-dom";
+import Navbar from "../../Shared/Navbar";
 
 const ProductDetails = () => {
     const product = useLoaderData();
@@ -7,22 +8,26 @@ const ProductDetails = () => {
     product;
   console.log(product);
   return (
-    <div className="card ">
+    <>
+    <Navbar></Navbar>
+    <div className="flex hover:shadow-xl fixed mt-40 ">
       <figure>
         <img
-        className="max-w-xs"
+        className="max-w-xl"
           src={image}
           alt={productName}
         />
       </figure>
       <div className="card-body">
-        <h2 className="card-title">{productName}</h2>
+        <h2 className="card-title text-3xl hover:text-blue-600">{productName}</h2>
+        <p className="text-xl  font-medium">${price}</p>
         <p>{description}</p>
-        <div className="card-actions justify-end">
-          <button className="btn btn-primary">Buy Now</button>
+        <div className="card-actions justify-start">
+          <button className="btn bg-blue-600 text-white">Add to Cart</button>
         </div>
       </div>
     </div>
+    </>
   );
 };
 

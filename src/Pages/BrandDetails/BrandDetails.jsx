@@ -12,6 +12,7 @@ const BrandDetails = () => {
   return (
     <>
     <Navbar></Navbar>
+    <br />
     <div className="grid grid-cols-1 md:grid-cols-2 ">
         {
             Brand?.map(product => <Product key={product._id} product={product}></Product>)
