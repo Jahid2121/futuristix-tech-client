@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useContext } from "react";
 import logo from "../assets/icons8-technology-64.png";
 import { Link, NavLink } from "react-router-dom";
+import { AuthContext } from "../providers/AuthProvider";
 
 const Pages = () => {
   const links = ['Home', 'Add Product', 'Account']
@@ -22,8 +23,13 @@ const Pages = () => {
 }
 
 const Navbar = () => {
-
+  const {user, logOut} = useContext(AuthContext)
   
+  const handleLogOut = () => {
+    logOut()
+    .then()
+    .catch()
+  }
 
   return (
     <div>
@@ -58,7 +64,10 @@ const Navbar = () => {
              <Pages />
             </ul>
           </div>
-        <Link to="/login"><button className="btn">Login</button></Link>
+          {
+            user ? <button onClick={handleLogOut} className="btn">Log Out</button> :  <Link to="/login"><button className="btn">Login</button></Link> 
+          }
+        
         </div>
       </div>
     </div>
