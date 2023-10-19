@@ -1,19 +1,25 @@
 import React from "react";
 
-const Product = ({ Brand }) => {
+const Product = ({ product }) => {
   const { productName, price, brandName, description, image, ratings, type } =
-    Brand;
+  product;
   return (
     <>
       <div className="card   mt-10 bg-base-100 shadow-xl">
         <figure>
-          <p className="badge badge-ghost text-xl -ml-16 -mt-96 ">{type}</p>
-          <img src={image} alt={productName} />
+          
+          <img className="max-w-80 max-h-52" src={image} alt={productName} />
         </figure>
         <div className="card-body">
-          <h2 className="card-title">{productName}</h2>
+         <div className="flex static">
+         <h2 className="card-title">{productName}</h2>
+          <p className="badge badge-ghost relative -mt-16  text-xl  ">{type}</p>
+         </div>
+         <div className="flex gap-5 items-center">
+         <div>
           <p className="font-medium">{brandName}</p>
           <p className="font-medium text-xl">${price}</p>
+          </div>
           {/* ratings */}
           <div className="rating">
             <input type="radio" name="rating-1" className="mask mask-star" />
@@ -27,6 +33,7 @@ const Product = ({ Brand }) => {
             <input type="radio" name="rating-1" className="mask mask-star" />
             <input type="radio" name="rating-1" className="mask mask-star" />
           </div>
+         </div>
 
           <div className="card-actions justify-end">
             <div className="badge btn badge-outline">View Details</div>

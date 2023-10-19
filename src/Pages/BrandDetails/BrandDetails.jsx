@@ -6,15 +6,17 @@ import Product from "../../components/Product/Product";
 const BrandDetails = () => {
   const { brand_name } = useParams();
   const products = useLoaderData();
-  const Brand = products?.find((data) => data.brandName === brand_name);
+  console.log(products);
+  const Brand = products?.filter((data) => data.brandName === brand_name);
   console.log(Brand);
-  const { productName, brandName, description, image, price, ratings, type } =
-    Brand;
   return (
     <>
     <Navbar></Navbar>
-    <div>
-        <Product Brand={Brand}></Product>
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+        {
+            Brand?.map(product => <Product key={product._id} product={product}></Product>)
+        }
+        
     </div>
     </>
   );
