@@ -28,20 +28,20 @@ const Navbar = () => {
   return (
     <div>
       
-      <div className="navbar bg-base-100">
-        <div className="navbar-start">
+      <div className="fixed overflow-hidden  mt-0 navbar bg-base-100">
+        <div className="">
           
           <div className="flex">
         <img className="w-10" src={logo} alt="" />
-        <h3 className="text-2xl font-bold">FUTURISTIX</h3>
+        <h3 className="text-2xl font-bold mr-16">FUTURISTIX</h3>
       </div>
         </div>
-        <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1">
+        <div className="navbar-center hidden mr-36 lg:flex">
+          <ul className="menu   menu-horizontal px-1">
             <Pages />
           </ul>
         </div>
-        <div className="navbar-end">
+        <div className="">
         <div className="dropdown dropdown-end">
       <label tabIndex={0} className="btn btn-ghost btn-circle">
         <div className="indicator">
