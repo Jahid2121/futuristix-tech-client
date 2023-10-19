@@ -1,7 +1,8 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Product = ({ product }) => {
-  const { productName, price, brandName, description, image, ratings, type } =
+  const {_id, productName, price, brandName, description, image, ratings, type } =
   product;
   return (
     <>
@@ -36,7 +37,7 @@ const Product = ({ product }) => {
          </div>
 
           <div className="card-actions justify-end">
-            <div className="badge btn badge-outline">View Details</div>
+          <Link to={`/productDetails/${_id}`}><div className="badge btn badge-outline">View Details</div></Link>
             <div className="badge btn badge-outline">Update</div>
           </div>
         </div>
