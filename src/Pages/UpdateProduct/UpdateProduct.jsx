@@ -6,7 +6,7 @@ import Swal from "sweetalert2";
 const UpdateProduct = () => {
   const product = useLoaderData();
   const {_id, productName, price, brandName, description, image, ratings, type } = product;
-  const handleUpdateProduct = (e) => {
+  const handleUpdateProduct = e => {
     e.preventDefault();
     const form = e.target;
     const productName = form.productName.value;
@@ -27,7 +27,7 @@ const UpdateProduct = () => {
     };
     console.log(updatedProduct);
 
-    fetch(`http://localhost:5000/products${_id}`, {
+    fetch(`http://localhost:5000/products/${_id}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",
