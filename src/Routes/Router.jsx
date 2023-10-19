@@ -11,6 +11,7 @@ import BrandDetails from "../Pages/BrandDetails/BrandDetails";
 import ProductDetails from "../Pages/ProductDetails/ProductDetails";
 import Cart from "../Pages/Cart/Cart";
 import Login from "../Pages/Login/Login";
+import PrivateRoutes from "./PrivateRotes/PrivateRoutes";
 
 
 const router = createBrowserRouter([
@@ -29,7 +30,7 @@ const router = createBrowserRouter([
         },
         {
             path: '/add Product',
-            element: <AddProduct></AddProduct>
+            element: <PrivateRoutes><AddProduct></AddProduct></PrivateRoutes>
         },
         {
             path: '/updateProduct/:id',
