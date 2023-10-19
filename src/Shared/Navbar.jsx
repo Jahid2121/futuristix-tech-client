@@ -58,7 +58,7 @@ const Navbar = () => {
              <Pages />
             </ul>
           </div>
-        <button className="btn">Login</button>
+        <Link to="/login"><button className="btn">Login</button></Link>
         </div>
       </div>
     </div>

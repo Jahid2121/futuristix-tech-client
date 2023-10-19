@@ -1,5 +1,6 @@
 import React, { useContext, useState } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
+import { Link } from "react-router-dom";
 
 const SignUp = () => {
   const [error, setError] = useState('')
@@ -13,8 +14,8 @@ const SignUp = () => {
     const password = form.password.value;
     console.log(email, password);
     
-    setError('')
-    setSuccess('')
+      setError('')
+      setSuccess('')
 
     
     
@@ -34,6 +35,7 @@ const SignUp = () => {
     createUser(email, password)
     .then(result => {
       console.log(result.user);
+      setSuccess('User created successfully')
     } )
     .catch(error => {
       console.error(error);
@@ -70,18 +72,7 @@ const SignUp = () => {
             className="input bg-slate-300 rounded-full input-bordered"
             required
           />
-          <div className="flex justify-around">
-            <label className="label">
-              <a href="#" className="label-text-alt text-white  link link-hover">
-                Forgot password?
-              </a>
-            </label>
-            <label className="label">
-              <a href="#" className="label-text-alt text-white link link-hover">
-                <input  type="checkbox" name="" id="" /> Remember Me
-              </a>
-            </label>
-          </div>
+          
         </div>
         {
       error && <p className='text-red-950 flex items-center'>{error}</p>
@@ -95,7 +86,7 @@ const SignUp = () => {
         
       </form>
       <div className="flex">
-      <button  className="text-center border p-2 glass rounded-full px-12 mx-auto text-2xl flex my-6 justify-center text-white">Login</button>
+      <Link to="/login"><button  className="text-center ml-[370px] border p-2 glass rounded-full px-12 mx-auto text-2xl flex my-6 justify-center text-white">Login</button></Link>
       </div>
       
 

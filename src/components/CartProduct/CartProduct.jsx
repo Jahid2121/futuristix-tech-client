@@ -16,7 +16,7 @@ const CartProduct = ({ product }) => {
       <div className="ml-8 text-3xl">
        
       
-            {/* row 1 */}
+            {/* row  */}
             <tr>
               <td>
                 <label>
