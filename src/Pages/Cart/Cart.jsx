@@ -10,20 +10,20 @@ const Cart = () => {
     <>
       <Navbar></Navbar>
 
-      <div className="fixed mt-20">
+      <div className="fixed mt-32 items-start">
+      <div className="overflow-x-auto ">
         <table className="table">
           {/* head */}
-          <thead>
+          <thead  className="text-black">
             <tr>
-              <th>
-                <label>
-                  <input type="checkbox" className="checkbox" />
-                </label>
-              </th>
-              <th>Name</th>
-              <th>Job</th>
-              <th>Favorite Color</th>
-              <th></th>
+                <hr />
+                <div className="w-full  text-center flex justify-center items-center mx-auto  gap-8">
+            <th></th>
+            
+              <th className=" grow text-xl">Product</th>
+              <th className="text-xl ">Price</th>
+              
+                </div>
             </tr>
           </thead>
           <tbody>
@@ -34,6 +34,7 @@ const Cart = () => {
         </tbody>
 
         </table>
+        </div>
 
       </div>
     </>
