@@ -39,7 +39,7 @@ const AddProduct = () => {
   return (
     <>
     <Navbar></Navbar>
-    <div style={{backgroundImage: "url('https://i.ibb.co/khyLmT4/background-2426328.jpg')"}} className="bg-cover pb-8">
+    <div style={{backgroundImage: "url('https://i.ibb.co/khyLmT4/background-2426328.jpg')"}} className="bg-cover min-h-screen pb-8">
       <h2 className="text-center text-3xl pt-24 text-white font-bold">Add a Product</h2>
       <form onSubmit={handleAddProduct}>
         {/* Name and Brand Name Row */}

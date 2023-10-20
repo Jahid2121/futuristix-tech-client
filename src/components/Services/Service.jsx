@@ -17,7 +17,7 @@ const Service = ({service}) => {
     const IconComponent = iconsMap[icon] || FaMobile;
     return (
         <div>
-            <div className='text-4xl items-center justify-center flex'>
+            <div className='text-4xl items-center  justify-center flex'>
             <IconComponent />
             </div>
             <h3 className='font-medium text-center text-xl'>{category}</h3>
