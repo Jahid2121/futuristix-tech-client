@@ -34,7 +34,7 @@ const Navbar = () => {
   return (
     <div>
       
-      <div className="fixed  z-10 mt-0 navbar bg-base-100">
+      <div data-aos="fade-down" className="fixed  z-10 mt-0 navbar bg-base-100">
         <div className="">
           
           <div className="flex">

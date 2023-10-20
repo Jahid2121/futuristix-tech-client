@@ -2,7 +2,7 @@ import React from 'react';
 import logo from '../../assets/icons8-technology-64.png'
 const Footer = () => {
     return (
-        <footer className="footer mb-0 sticky p-10 bg-base-200 text-base-content">
+        <footer data-aos="fade-up" className="footer mb-0 sticky p-10 bg-base-200 text-base-content">
         <aside>
         <img src={logo} alt="" />
           <p>FUTURISTIX TECH<br/>Your Ultimate Destination for Gadgets Galore!</p>

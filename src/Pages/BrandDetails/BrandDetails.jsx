@@ -9,7 +9,6 @@ const BrandDetails = () => {
   const { brand_name } = useParams();
   const products = useLoaderData();
   const Brand = products?.filter((data) => data.brandName === brand_name);
-  const foundProduct = Brand?.find(product => product);
   return (
     <>
     <Navbar></Navbar>
@@ -19,10 +18,8 @@ const BrandDetails = () => {
   
   
 
-    foundProduct && <>
-    <img src={products.image} alt="" />
-    <h2 className="text-center text-4xl mb-9 font-bold">{foundProduct.brandName}</h2> 
-    </>
+    
+    <h2 className="text-center text-4xl mb-9 font-bold">{brand_name}</h2> 
     
       }
       <Slider Brand={Brand}></Slider>

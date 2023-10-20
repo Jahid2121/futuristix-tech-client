@@ -4,7 +4,7 @@ import verified from '../../assets/icons8-verified.gif'
 import warranty from '../../assets/icons8-warranty.gif'
 const WhyChooseUs = () => {
     return (
-        <div>
+        <div data-aos="fade-up">
             <h2 className='text-4xl font-bold text-center my-16'>Why Choose Us?</h2>
             <div className='grid  grid-cols-1 mb-20 gap-4   md:grid-cols-2 lg:grid-cols-3 '>
                 <div className=' p-6 bg-base-100 shadow '>
