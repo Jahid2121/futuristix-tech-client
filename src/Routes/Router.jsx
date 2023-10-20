@@ -37,7 +37,7 @@ const router = createBrowserRouter([
         {
             path: '/updateProduct/:id',
             element: <PrivateRoutes><UpdateProduct></UpdateProduct></PrivateRoutes>,
-            loader: ({params}) => fetch(`http://localhost:5000/products/${params.id}`)
+            loader: ({params}) => fetch(`https://futuristix-tech-server-5fldsw6yr-jahid2121s-projects.vercel.app/products/${params.id}`)
         },
         {
             path: '/signUp',
@@ -46,17 +46,17 @@ const router = createBrowserRouter([
         {
           path: '/brandDetails/:brand_name',
           element: <BrandDetails></BrandDetails>,
-          loader: () => fetch('http://localhost:5000/products')
+          loader: () => fetch('https://futuristix-tech-server-5fldsw6yr-jahid2121s-projects.vercel.app/products')
         },
         {
           path: '/products/:id',
           element: <PrivateRoutes><ProductDetails></ProductDetails></PrivateRoutes>,
-          loader: ({params}) => fetch(`http://localhost:5000/products/${params.id}`)
+          loader: ({params}) => fetch(`https://futuristix-tech-server-5fldsw6yr-jahid2121s-projects.vercel.app/products/${params.id}`)
         },
         {
           path: '/productsCart',
           element: <PrivateRoutes><Cart></Cart></PrivateRoutes> ,
-          loader: () => fetch('http://localhost:5000/cartProducts')
+          loader: () => fetch('https://futuristix-tech-server-5fldsw6yr-jahid2121s-projects.vercel.app/cartProducts')
         },
         {
           path: '/login',

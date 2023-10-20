@@ -1,7 +1,7 @@
 import React from "react";
 import { FaXmark } from "react-icons/fa6";
 import Swal from "sweetalert2";
-const CartProduct = ({ product,setCartProducts,cartProducts }) => {
+const CartProduct = ({ product, setCartProducts, cartProducts }) => {
   const handleDelete = (_id) => {
     Swal.fire({
       title: "Are you sure?",
@@ -13,7 +13,7 @@ const CartProduct = ({ product,setCartProducts,cartProducts }) => {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        fetch(`http://localhost:5000/cartProducts/${_id}`, {
+        fetch(`https://futuristix-tech-server-5fldsw6yr-jahid2121s-projects.vercel.app/cartProducts/${_id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())
@@ -22,8 +22,10 @@ const CartProduct = ({ product,setCartProducts,cartProducts }) => {
             if (data.deletedCount === 1) {
               Swal.fire("Deleted!", "Your file has been deleted.", "success");
 
-              const remaining = cartProducts.filter(product => product._id !== _id)
-              setCartProducts(remaining)
+              const remaining = cartProducts.filter(
+                (product) => product._id !== _id
+              );
+              setCartProducts(remaining);
             }
           });
       }

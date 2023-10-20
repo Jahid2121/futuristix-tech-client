@@ -9,7 +9,7 @@ const ProductDetails = () => {
     product;
 
     const handleAddToCart = product => {
-      fetch('http://localhost:5000/cartProducts', {
+      fetch('https://futuristix-tech-server-5fldsw6yr-jahid2121s-projects.vercel.app/cartProducts', {
         method: 'POST',
         headers: {
           'content-type': 'application/json'
