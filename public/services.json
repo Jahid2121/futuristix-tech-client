@@ -1,0 +1,42 @@
+[
+    {
+        "category": "Mobile Devices",
+        "icon": "FaMobile",
+        "description": "Upgrade your mobile experience with our latest selection of smartphones and tablets. From flagship models to budget-friendly options, we offer a diverse range of mobile devices to suit every lifestyle and requirement."
+    },
+    {
+        "category": "Laptops and Computers",
+        "icon": "FaLaptop",
+        "description": "Discover the power of seamless computing with our high-performance laptops and desktop computers. Whether you need a laptop for gaming, professional tasks, or everyday use, we have a variety of options featuring cutting-edge technology, sleek designs, and impressive performance."
+    },
+    {
+        "category": "Wearable Tech",
+        "icon": "FaClock",
+        "description": "Stay connected and enhance your lifestyle with our collection of smartwatches, fitness trackers, and other wearable devices. Monitor your health, receive notifications, and enjoy a range of features designed to simplify your daily activities."
+    },
+    {
+        "category": "Accessories and Gadgets",
+        "icon": "FaHeadphones",
+        "description": "Elevate your tech setup with our extensive range of accessories and gadgets. From phone cases and chargers to gaming peripherals and audio devices, we offer high-quality accessories that complement your devices perfectly."
+    },
+    {
+        "category": "Tech Support and Repairs",
+        "icon": "FaTools",
+        "description": "Count on us for reliable tech support and repair services. Our skilled technicians are here to assist you with troubleshooting, software installation, and hardware repairs. Whether you need help setting up your new device or fixing a technical issue, we provide timely and efficient solutions to ensure your gadgets are always in top condition."
+    },
+    {
+        "category": "Home Automation and Smart Devices",
+        "icon": "FaHome",
+        "description": "Transform your home into a smart, connected space with our home automation services. Explore the world of smart devices, including smart lighting, thermostats, security cameras, and more. Create a customized home automation system that enhances convenience, energy efficiency, and security."
+    },
+    {
+        "category": "Software Development and Custom Solutions",
+        "icon": "FaCode",
+        "description": "Empower your business with custom software solutions tailored to your unique needs. Our experienced software developers can create bespoke applications, websites, and software integrations designed to optimize your workflow and enhance productivity."
+    },
+    {
+        "category": "IT Consultation and Managed Services",
+        "icon": "FaNetworkWired",
+        "description": "Navigate the complexities of IT infrastructure and technology management with our IT consultation and managed services. Partner with us for strategic IT planning, cybersecurity assessments, and network optimization."
+    }
+]
