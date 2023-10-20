@@ -5,7 +5,7 @@ const Banner = () => {
         <div className='static '>
             <img className=' mx-auto' src={bannerImg} alt="" />
             <div className='-mt-96 mb-72 text-center'>
-            <h2 className='relative font-bold text-5xl mb-4 text-[#F1EFEF]'>Shop the Latest Gadgets, <br /> Explore Limitless Possibilities!</h2>
+            <h2 className=' font-bold text-5xl mb-4 text-[#F1EFEF]'>Shop the Latest Gadgets, <br /> Explore Limitless Possibilities!</h2>
             <button className='btn bg-blue-600 border-0 text-white'>Explore More</button>
             </div>
         </div>

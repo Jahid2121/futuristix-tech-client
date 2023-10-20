@@ -9,7 +9,7 @@ const PrivateRoutes = ({children}) => {
     console.log(location);
 
     if(loading){
-        return <span className="loading loading-ring loading-lg"></span>
+        return <img className='mx-auto mt-56' src={'https://i.ibb.co/j8qRk5z/icons8-loading.gif'} alt="" />
     }
 
     if(user){

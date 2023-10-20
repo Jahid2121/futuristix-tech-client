@@ -3,6 +3,7 @@ import Brand from "./Brand";
 
 const TopBrand = ({products}) => {
   return (
+    <>
     <div className="text-center">
       <h2 className="text-3xl font-bold mb-7">Explore Top Brands</h2>
 
@@ -12,6 +13,7 @@ const TopBrand = ({products}) => {
         }
       </div>
     </div>
+    </>
   );
 };
 

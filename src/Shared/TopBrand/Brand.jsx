@@ -4,9 +4,10 @@ import { Link } from 'react-router-dom';
 const Brand = ({product}) => {
     const {_id,brand_name, image} = product
     return (
+      <>
         <Link to={`/brandDetails/${brand_name}`}>
         <div>
-            <div className="card  glass">
+            <div className="card static z-0 glass">
         <figure>
           <img className="w-32"
             src={image}
@@ -19,6 +20,7 @@ const Brand = ({product}) => {
       </div>
         </div>
         </Link>
+        </>
     );
 };
 

@@ -55,7 +55,7 @@ const UpdateProduct = () => {
           backgroundImage:
             "url('https://i.ibb.co/ZGt27Ys/alex-shutin-k-Kv-QJ6r-K6-S4-unsplash.jpg')",
         }}
-        className="bg-cover pb-8"
+        className="bg-cover z-20 pb-8"
       >
         <h2 className="text-center text-3xl pt-24 text-white font-bold">
           Update Product : {productName}

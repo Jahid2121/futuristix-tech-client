@@ -34,7 +34,7 @@ const Navbar = () => {
   return (
     <div>
       
-      <div className="fixed overflow-hidden  mt-0 navbar bg-base-100">
+      <div className="fixed overflow-hidden z-10 mt-0 navbar bg-base-100">
         <div className="">
           
           <div className="flex">
