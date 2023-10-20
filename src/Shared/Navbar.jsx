@@ -34,7 +34,7 @@ const Navbar = () => {
   return (
     <div>
       
-      <div className="fixed overflow-hidden z-10 mt-0 navbar bg-base-100">
+      <div className="fixed  z-10 mt-0 navbar bg-base-100">
         <div className="">
           
           <div className="flex">
@@ -65,8 +65,22 @@ const Navbar = () => {
             </ul>
           </div>
           {
-            user ? <button onClick={handleLogOut} className="btn">Log Out</button> :  <Link to="/login"><button className="btn">Login</button></Link> 
-          }
+    user ?  <div className="dropdown   pl-36 dropdown-end">
+    <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
+      <div className="w-10 rounded-full ">
+        <img className="" src="https://i.ibb.co/bbPmhgG/My-Profile-Pic.png" />
+      </div>
+    </label>
+    <ul tabIndex={0} className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">
+      <p className="bg-custom-Pink text-xl text-black rounded-t-xl p-2">Jahid</p>
+      <li className="bg-custom-Pink-light text-white text-base font-medium  items-center  rounded-sm" onClick={handleLogOut}><button className="p-3 bg-blue-500">Logout</button></li>
+    </ul>
+  </div> 
+  :
+  <div className="navbar-end">
+  <Link to="/login"><button className="bg-blue-500 btn text-white">Login</button></Link>
+  </div>
+  }
         
         </div>
       </div>

@@ -14,6 +14,7 @@ const Login = () => {
       googleLogin()
       .then(result => {
         console.log(result.user);
+        navigate(location?.state ? location.state : '/')
       })
       .catch(error => {
         console.error(error);
@@ -111,7 +112,7 @@ const Login = () => {
       </form>
       <div className="flex">
         <Link to="/signUp">
-          <button className="text-center items-center ml-[350px] border p-2  rounded-full px-12 mx-auto text-2xl flex my-6 justify-center text-white">
+          <button className="text-center items-center ml-[350px] border p-2  rounded-full px-12 mx-auto text-2xl bg-blue-500 flex my-6 justify-center text-white">
             Sign Up
           </button>
         </Link>
