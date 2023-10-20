@@ -1,10 +1,11 @@
 import React, { useContext, useState } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
 import { Link } from "react-router-dom";
-
+import { FaEye, FaEyeSlash } from "react-icons/fa";
 const SignUp = () => {
   const [error, setError] = useState('')
     const [success, setSuccess] = useState('')
+    const [ShowPassword, setShowPassword] = useState(false)
  
   const {createUser} = useContext(AuthContext)
   const handleLogin = e => {
@@ -61,17 +62,24 @@ const SignUp = () => {
             required
           />
         </div>
-        <div className="form-control">
+        <div  className="form-control">
           <label className="label">
             <span className="label-text text-white ">Password</span>
           </label>
+          <div className="flex ">
           <input
           name="password"
-            type="password"
+            type={ShowPassword ? 'text' : "password"}
             placeholder="password"
-            className="input bg-slate-300 rounded-full input-bordered"
+            className="input bg-slate-300 pr-32 rounded-full input-bordered"
             required
           />
+            <span className='relative -ml-9 mt-4'  onClick={() => setShowPassword(!ShowPassword)}>
+            {
+              ShowPassword ? <FaEye />  : <FaEyeSlash/>
+            }
+          </span>
+          </div>
           
         </div>
         {
