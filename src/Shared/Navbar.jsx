@@ -23,7 +23,7 @@ const Pages = () => {
 }
 
 const Navbar = () => {
-  const {user, logOut, name, email} = useContext(AuthContext)
+  const {user, logOut, name, email,image} = useContext(AuthContext)
   
   const handleLogOut = () => {
     logOut()
@@ -68,7 +68,7 @@ const Navbar = () => {
     user ?  <div className="dropdown   pl-36 dropdown-end">
     <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
       <div className="w-10 rounded-full ">
-        <img className="" src="https://i.ibb.co/bbPmhgG/My-Profile-Pic.png" />
+        <img className="" src={image} />
       </div>
     </label>
     <ul tabIndex={0} className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">
