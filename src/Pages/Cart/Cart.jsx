@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import { useLoaderData } from "react-router-dom";
 import CartProduct from "../../components/CartProduct/CartProduct";
 import Navbar from "../../Shared/Navbar";
 
 const Cart = () => {
-  const cartProducts = useLoaderData();
+  const loadedcartProducts = useLoaderData();
+  const [cartProducts, setCartProducts] = useState(loadedcartProducts)
+
   console.log(cartProducts);
   return (
     <>
@@ -29,7 +31,7 @@ const Cart = () => {
           <tbody>
 
         {cartProducts?.map((product) => (
-          <CartProduct key={product._id} product={product}></CartProduct>
+          <CartProduct key={product._id} cartProducts={cartProducts} setCartProducts={setCartProducts} product={product}></CartProduct>
         ))}
         </tbody>
 

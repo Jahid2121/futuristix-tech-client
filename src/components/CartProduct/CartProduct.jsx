@@ -1,7 +1,7 @@
 import React from "react";
 import { FaXmark } from "react-icons/fa6";
 import Swal from "sweetalert2";
-const CartProduct = ({ product }) => {
+const CartProduct = ({ product,setCartProducts,cartProducts }) => {
   const handleDelete = (_id) => {
     Swal.fire({
       title: "Are you sure?",
@@ -22,7 +22,8 @@ const CartProduct = ({ product }) => {
             if (data.deletedCount === 1) {
               Swal.fire("Deleted!", "Your file has been deleted.", "success");
 
-              
+              const remaining = cartProducts.filter(product => product._id !== _id)
+              setCartProducts(remaining)
             }
           });
       }

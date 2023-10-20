@@ -34,7 +34,7 @@ const ProductDetails = () => {
     <div className="flex hover:shadow-xl fixed mt-40 ">
       <figure>
         <img
-        className="max-w-xl"
+        className="max-w-xl h-96"
           src={image}
           alt={productName}
         />
