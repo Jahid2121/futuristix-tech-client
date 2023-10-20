@@ -6,7 +6,7 @@ const Product = ({ product }) => {
   product 
   return (
     <>
-      <div className="card   mt-10 bg-base-100 shadow-xl">
+      <div data-aos="fade-down" className="card   mt-10 bg-base-100 shadow-xl">
         <figure>
           
           <img className="max-w-80 max-h-52" src={image} alt={productName} />
@@ -40,7 +40,7 @@ const Product = ({ product }) => {
           <Link to={`/products/${_id}`}><div className="badge btn badge-outline">View Details</div></Link>
           <Link to={`/updateProduct/${_id}`}>
           <div
-            className="badge btn badge-outline">Update</div>
+            className="badge btn bg-blue-500 text-white badge-outline">Update</div>
           </Link>
           </div>
         </div>

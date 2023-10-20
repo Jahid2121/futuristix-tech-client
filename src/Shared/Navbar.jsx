@@ -4,7 +4,7 @@ import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../providers/AuthProvider";
 
 const Pages = () => {
-  const links = ['Home', 'Add Product', 'Account']
+  const links = ['Home', 'Add Product']
   return (
     <>
     {
@@ -35,12 +35,12 @@ const Navbar = () => {
   return (
     <div>
       
-      <div data-aos="fade-down" className="fixed text-white bg-blue-400  z-10 mt-0 navbar bg-base-100">
+      <div data-aos="fade-down" className="fixed  bg-blue-400  z-10 mt-0 navbar ">
         <div className="">
           
           <div className="flex">
-        <img className="w-10" src={logo} alt="" />
-        <h3 className="text-2xl font-bold mr-16">FUTURISTIX</h3>
+        <img className="w-10 text-white" src={logo} alt="" />
+        <h3 className="text-2xl text-white font-bold mr-16">FUTURISTIX</h3>
       </div>
         </div>
         <div className="navbar-center hidden mr-36 lg:flex">
@@ -69,11 +69,13 @@ const Navbar = () => {
     user ?  <div className="dropdown   pl-36 dropdown-end">
     <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
       <div className="w-10 rounded-full ">
-        <img className="" src={image} />
+       {
+        image ?  <img className="" src={image } /> : <button className="mt-3">Out</button>
+       }
       </div>
     </label>
     <ul tabIndex={0} className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">
-      <p className="bg-custom-Pink text-xl text-black rounded-t-xl p-2">{name}</p>
+      <p className="bg-custom-Pink text-xl  text-green-700 rounded-t-xl p-2">{name}</p>
       <p>{email}</p>
       <li className="bg-custom-Pink-light text-white text-base font-medium  items-center  rounded-sm" onClick={handleLogOut}><button className="p-3 bg-blue-500">Logout</button></li>
     </ul>

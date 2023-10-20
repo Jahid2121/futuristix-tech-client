@@ -22,7 +22,10 @@ const BrandDetails = () => {
     <h2 className="text-center text-4xl mb-9 font-bold">{brand_name}</h2> 
     
       }
-      <Slider Brand={Brand}></Slider>
+      {
+        (brand_name === 'Samsung') || <Slider Brand={Brand}></Slider>
+      }
+      
       </div>
     <div className="grid grid-cols-1 md:grid-cols-2 ">
         {
@@ -30,7 +33,7 @@ const BrandDetails = () => {
             <NoProduct></NoProduct>
           :
         
-            Brand?.map(product => <Product key={product._id} product={product}></Product>)
+            Brand?.map(product => <Product  key={product._id} product={product}></Product>)
           
         }
         

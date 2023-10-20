@@ -31,7 +31,7 @@ const ProductDetails = () => {
   return (
     <>
     <Navbar></Navbar>
-    <div className="flex hover:shadow-xl fixed mt-40 ">
+    <div data-aos="flip-left" className="flex hover:shadow-xl fixed mt-40 ">
       <figure>
         <img
         className="max-w-xl h-96"
@@ -40,13 +40,13 @@ const ProductDetails = () => {
         />
       </figure>
       <div className="card-body">
-        <h2 className="card-title text-3xl hover:text-blue-600">{productName}</h2>
+        <h2 className="font-bold text-3xl hover:text-blue-600">{productName}</h2>
         <p className="text-xl  font-medium">${price}</p>
-        <p>{description}</p>
+        <p className="">{description}</p>
         <div className="card-actions justify-start">
           <button
           onClick={() => handleAddToCart(product)}
-          className="btn bg-blue-600 text-white">Add to Cart</button>
+          className="btn mb-52 bg-blue-600 text-white">Add to Cart</button>
         </div>
       </div>
     </div>
