@@ -12,8 +12,10 @@ const SignUp = () => {
     e.preventDefault();
     const form = e.target;
     const email = form.email.value;
+    const name = form.name.value;
+    const photo = form.photo.value;
     const password = form.password.value;
-    console.log(email, password);
+    console.log(email, password,name, photo);
     
       setError('')
       setSuccess('')
@@ -50,6 +52,30 @@ const SignUp = () => {
       <form style={{backdropFilter: 'blur(3px)'}}  onSubmit={handleLogin} className="card-body rounded-xl  border-2 w-[400px] mx-auto ">
         <h2 className="text-white text-3xl font-bold text-center">Sign Up</h2>
         <hr />
+        <div className="form-control ">
+          <label className="label">
+            <span className="label-text text-white">Name</span>
+          </label>
+          <input
+          name="name"
+            type="text"
+            placeholder="name"
+            className="input bg-slate-300 rounded-full input-bordered"
+            required
+          />
+        </div>
+        <div className="form-control ">
+          <label className="label">
+            <span className="label-text text-white">PhotoURL</span>
+          </label>
+          <input
+          name="photo"
+            type="text"
+            placeholder="PhotoURL"
+            className="input bg-slate-300 rounded-full input-bordered"
+            required
+          />
+        </div>
         <div className="form-control ">
           <label className="label">
             <span className="label-text text-white">Email</span>

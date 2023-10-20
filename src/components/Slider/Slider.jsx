@@ -11,7 +11,7 @@ const Slider = ({Brand}) => {
     console.log(Brand);
     return (
         <Swiper
-      spaceBetween={50}
+      spaceBetween={10}
       slidesPerView={3}
       onSlideChange={() => console.log('slide change')}
       onSwiper={(swiper) => console.log(swiper)}
@@ -19,11 +19,11 @@ const Slider = ({Brand}) => {
 
       {
         
-            Brand?.map(product => <SwiperSlide key={product._id} product={product}><img src={product.image} alt="" /></SwiperSlide>)
+            Brand?.map(product => <SwiperSlide key={product._id} product={product}><img className='w-80 h-64' src={product.image} alt="" /></SwiperSlide>)
           
       }
      
-      ...
+     <p className='text-center'> ...</p>
     </Swiper>
     );
 };
