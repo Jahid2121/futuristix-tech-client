@@ -1,11 +1,18 @@
 import React, { useContext, useState } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
 import logo from "../../assets/icons8-technology-64.png";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 const Login = () => {
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
   const { logIn } = useContext(AuthContext);
+  const location = useLocation()
+  const navigate = useNavigate()
+  console.log('location in the login', location);
+
+
+
+
   const handleLogin = (e) => {
     e.preventDefault();
     const form = e.target;
@@ -19,6 +26,7 @@ const Login = () => {
     logIn(email, password)
       .then((result) => {
         console.log(result.user);
+        navigate(location?.state ? location.state : '/')
         setSuccess("Login successful");
       })
       .catch((error) => {

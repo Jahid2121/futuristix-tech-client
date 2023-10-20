@@ -3,6 +3,8 @@ import Navbar from '../../Shared/Navbar';
 import Banner from '../../Shared/Banner';
 import TopBrand from '../../Shared/TopBrand/TopBrand';
 import { useLoaderData } from 'react-router-dom';
+import Footer from '../../components/Footer/Footer';
+import Services from '../../components/Services/Services';
 
 const Home = () => {
     const products = useLoaderData()
@@ -11,6 +13,8 @@ const Home = () => {
             <Navbar></Navbar>
             <Banner></Banner>
             <TopBrand products={products}></TopBrand>
+            <Services></Services>
+            <Footer></Footer>
         </div>
     );
 };

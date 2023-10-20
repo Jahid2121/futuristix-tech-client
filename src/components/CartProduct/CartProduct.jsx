@@ -2,7 +2,7 @@ import React from "react";
 import { FaXmark } from "react-icons/fa6";
 import Swal from "sweetalert2";
 const CartProduct = ({ product }) => {
-  const handleDelete = _id => {
+  const handleDelete = (_id) => {
     Swal.fire({
       title: "Are you sure?",
       text: "You won't be able to revert this!",
@@ -21,6 +21,8 @@ const CartProduct = ({ product }) => {
             console.log(data);
             if (data.deletedCount === 1) {
               Swal.fire("Deleted!", "Your file has been deleted.", "success");
+
+              
             }
           });
       }
