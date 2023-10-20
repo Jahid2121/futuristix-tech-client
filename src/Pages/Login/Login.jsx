@@ -2,14 +2,23 @@ import React, { useContext, useState } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
 import logo from "../../assets/icons8-technology-64.png";
 import { Link, useLocation, useNavigate } from "react-router-dom";
+import { AiOutlineGoogle } from "react-icons/ai";
 const Login = () => {
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
-  const { logIn } = useContext(AuthContext);
+  const { logIn,  googleLogin } = useContext(AuthContext);
   const location = useLocation()
   const navigate = useNavigate()
-  console.log('location in the login', location);
 
+    const handleGoogleLogin = () => {
+      googleLogin()
+      .then(result => {
+        console.log(result.user);
+      })
+      .catch(error => {
+        console.error(error);
+      })
+    }
 
 
 
@@ -96,6 +105,9 @@ const Login = () => {
         <div className="form-control mt-6">
           <button className="btn bg-slate-400 rounded-3xl">Login</button>
         </div>
+       <div className="text-center  text-white">
+       <span onClick={handleGoogleLogin}><button className='hover:bg-custom-yellow p-3 mt-8 mr-5 border text-2xl rounded-full'><AiOutlineGoogle/> </button></span>
+       </div>
       </form>
       <div className="flex">
         <Link to="/signUp">

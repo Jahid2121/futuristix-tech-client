@@ -5,14 +5,18 @@ import { getAuth } from "firebase/auth";
 // https://firebase.google.com/docs/web/setup#available-libraries
 
 // Your web app's Firebase configuration
+
+const all = import.meta.env
+
 const firebaseConfig = {
-  apiKey: "AIzaSyAJUkG3aRbTGFzt6dAEXEcMmx9Pg0fe9tg",
-  authDomain: "futuristix-tech.firebaseapp.com",
-  projectId: "futuristix-tech",
-  storageBucket: "futuristix-tech.appspot.com",
-  messagingSenderId: "335230698975",
-  appId: "1:335230698975:web:7cbd31bbbf08c15663f06a"
+  apiKey: all.VITE_apiKey,
+  authDomain: all.VITE_authDomain,
+  projectId: all.VITE_projectId,
+  storageBucket: all.VITE_storageBucket,
+  messagingSenderId: all.VITE_messagingSenderId,
+  appId: all.VITE_appId,
 };
+console.log(firebaseConfig);
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
