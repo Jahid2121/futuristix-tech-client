@@ -1,6 +1,9 @@
-# FUTURISTIX TECH 🌟
+# FUTURISTIX TECH 🌐
 
 Welcome to FUTURISTIX TECH, your one-stop destination for cutting-edge technology products! Explore top brands and discover the future of technology.
+
+## E-commerce Platform with Brand Selection 🌟
+Your project is an e-commerce website that offers users a seamless experience in browsing through top brands such as Apple, HP, and more. Users can easily explore products from their favorite brands by clicking on the respective brand name.
 
 ## Intuitive Product Card Display 📦
 
