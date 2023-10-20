@@ -23,7 +23,7 @@ const Pages = () => {
 }
 
 const Navbar = () => {
-  const {user, logOut} = useContext(AuthContext)
+  const {user, logOut, name, email} = useContext(AuthContext)
   
   const handleLogOut = () => {
     logOut()
@@ -72,7 +72,8 @@ const Navbar = () => {
       </div>
     </label>
     <ul tabIndex={0} className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">
-      <p className="bg-custom-Pink text-xl text-black rounded-t-xl p-2">Jahid</p>
+      <p className="bg-custom-Pink text-xl text-black rounded-t-xl p-2">{name}</p>
+      <p>{email}</p>
       <li className="bg-custom-Pink-light text-white text-base font-medium  items-center  rounded-sm" onClick={handleLogOut}><button className="p-3 bg-blue-500">Logout</button></li>
     </ul>
   </div> 
