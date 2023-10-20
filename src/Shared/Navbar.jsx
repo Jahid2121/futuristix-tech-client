@@ -12,7 +12,8 @@ const Pages = () => {
         <NavLink className="mr-4"  style={({ isActive }) => {
     return {
       fontWeight: isActive ? "bold" : "",
-      color: isActive ? "black" : "",
+      color: isActive ? "" : "",
+      backgroundColor: isActive ? "#3876BF" : "",
       textDecoration: isActive ? "underline" : "",
     };
   }} to={`/${link}`}>{link}</NavLink>
@@ -34,7 +35,7 @@ const Navbar = () => {
   return (
     <div>
       
-      <div data-aos="fade-down" className="fixed  z-10 mt-0 navbar bg-base-100">
+      <div data-aos="fade-down" className="fixed text-white bg-blue-400  z-10 mt-0 navbar bg-base-100">
         <div className="">
           
           <div className="flex">
