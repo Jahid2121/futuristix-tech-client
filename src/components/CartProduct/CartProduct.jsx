@@ -43,8 +43,8 @@ const CartProduct = ({ product, setCartProducts, cartProducts }) => {
     type,
   } = product;
   return (
-    <div>
-      <div className="ml-8 text-3xl">
+    <div className="">
+      <div className="md:ml-8 text-sm md:text-3xl">
         {/* row  */}
         <tr>
           <td>
@@ -55,7 +55,7 @@ const CartProduct = ({ product, setCartProducts, cartProducts }) => {
             </label>
           </td>
           <td>
-            <div className="flex w-[500px] ml-8 items-center space-x-3">
+            <div className="flex md:w-[500px] md:ml-8 items-center md:space-x-3">
               <div className="avatar">
                 <div className="mask rounded-full mr-4 mask-squircle w-12 h-12">
                   <img src={image} alt={productName} />

@@ -12,9 +12,9 @@ const Cart = () => {
     <>
       <Navbar></Navbar>
 
-      <div className="fixed mt-32 items-start">
+      <div className="fixed mt-32  items-start">
       <div className="overflow-x-auto ">
-        <table className="table">
+        <table className="table  ">
           {/* head */}
           <thead  className="text-black">
             <tr>

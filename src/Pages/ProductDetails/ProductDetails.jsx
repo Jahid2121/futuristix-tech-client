@@ -31,10 +31,10 @@ const ProductDetails = () => {
   return (
     <>
     <Navbar></Navbar>
-    <div data-aos="flip-left" className="flex hover:shadow-xl fixed mt-40 ">
+    <div data-aos="flip-left" className="md:flex   hover:shadow-xl fixed mt-40 ">
       <figure>
         <img
-        className="max-w-xl h-96"
+        className="md:max-w-xl w-72 ml-2 md:w-full md:h-96"
           src={image}
           alt={productName}
         />
