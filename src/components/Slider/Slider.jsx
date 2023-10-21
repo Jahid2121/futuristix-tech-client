@@ -8,13 +8,12 @@ import 'swiper/css';
 
 
 const Slider = ({Brand}) => {
-    console.log(Brand);
     return (
         <Swiper 
       spaceBetween={10}
       slidesPerView={3}
-      onSlideChange={() => console.log('slide change')}
-      onSwiper={(swiper) => console.log(swiper)}
+      // onSlideChange={() => console.log('slide change')}
+      // onSwiper={(swiper) => console.log(swiper)}
     >
 
       {

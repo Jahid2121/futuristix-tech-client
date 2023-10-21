@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useLoaderData, useParams } from "react-router-dom";
 import Navbar from "../../Shared/Navbar";
 import Product from "../../components/Product/Product";
@@ -6,9 +6,20 @@ import NoProduct from "../../components/NoProduct/NoProduct";
 import Slider from "../../components/Slider/Slider";
 
 const BrandDetails = () => {
+  const [advertiseProducts, setAdvertiseProducts] = useState()
   const { brand_name } = useParams();
+  
   const products = useLoaderData();
-  const Brand = products?.filter((data) => data.brandName === brand_name);
+  const Brand = products?.filter((data) => data.brandName.toLowerCase() === brand_name.toLowerCase());
+  const findProducts = advertiseProducts?.filter((data) => data.brand_name.toLowerCase() === brand_name.toLowerCase())
+  console.log(findProducts);
+  useEffect(() => {
+    fetch("/product.json")
+    .then(res => res.json())
+    .then(data => setAdvertiseProducts(data))
+  },[])
+
+
   return (
     <>
     <Navbar></Navbar>
