@@ -35,8 +35,21 @@ const Navbar = () => {
   return (
     <div>
       
-      <div data-aos="fade-down" className="fixed   bg-blue-400  z-10 mt-0 navbar ">
+      <div data-aos="fade-down" className="fixed ml-10 z-10 mt-0  ">
+        <div className="bg-blue-500 navbar">
         <div className="">
+        <div className="dropdown">
+      <label tabIndex={0} className="btn btn-ghost lg:hidden">
+        <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
+      </label>
+      <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+        <Pages />
+        {
+          user ? <li className="bg-custom-Pink-light text-white text-base font-medium  items-center  rounded-sm" onClick={handleLogOut}><button className="p-3 bg-blue-500">Logout</button></li> : <Link to="/login"><button className="bg-blue-500  p-2 rounded-xl text-white">Login</button></Link>
+        }
+         <Link className="btn" to='/productsCart'>My Cart</Link>
+      </ul>
+    </div>
           
           <div className="flex">
         <img className="w-10 text-white" src={logo} alt="" />
@@ -66,7 +79,7 @@ const Navbar = () => {
        }
       </div>
     </label>
-    <ul tabIndex={0} className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">
+    <ul tabIndex={0} className="mt-3  p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">
       <p className="bg-custom-Pink text-xl  text-blue-700 rounded-t-xl p-2">{name}</p>
       <p>{email}</p>
       <li className="bg-custom-Pink-light text-white text-base font-medium  items-center  rounded-sm" onClick={handleLogOut}><button className="p-3 bg-blue-500">Logout</button></li>
@@ -78,6 +91,7 @@ const Navbar = () => {
   </div>
   }
         
+        </div>
         </div>
       </div>
     </div>
