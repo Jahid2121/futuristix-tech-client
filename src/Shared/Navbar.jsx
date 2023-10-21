@@ -36,7 +36,7 @@ const Navbar = () => {
     <div>
       
       <div className="fixed   z-10 mt-0  ">
-        <div className="bg-blue-500 md:mr-[185px] mr-16 navbar">
+        <div data-aos="fade-down" className="bg-blue-500 md:mr-[185px]  navbar">
         <div className="">
         <div className="dropdown">
       <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -44,9 +44,9 @@ const Navbar = () => {
       </label>
       <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
         <Pages />
-        {
-          user ? <li className="bg-custom-Pink-light text-white text-base font-medium  items-center  rounded-sm" onClick={handleLogOut}><button className="p-3 bg-blue-500">Logout</button></li> : <Link to="/login"><button className="bg-blue-500  p-2 rounded-xl text-white">Login</button></Link>
-        }
+      {/* {
+        user ? <li className="bg-custom-Pink-light text-white text-base font-medium  items-center  rounded-sm" onClick={handleLogOut}><button className="p-3 bg-blue-500">Logout</button></li> : <Link to="/login"><button className="bg-blue-500  p-2 rounded-xl text-white">Login</button></Link>
+      } */}
          <Link className="btn" to='/productsCart'>My Cart</Link>
       </ul>
     </div>

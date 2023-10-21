@@ -3,7 +3,7 @@ import logo from '../../assets/icons8-technology-64.png'
 import { Link } from 'react-router-dom';
 const Footer = () => {
     return (
-        <footer data-aos="fade-up" className="footer bg-blue-500  mb-0 sticky p-10 text-white">
+        <footer data-aos="fade-up" className="footer bg-blue-500   mb-0 sticky p-10 text-white">
         <aside>
         <img src={logo} alt="" />
           <p>FUTURISTIX TECH<br/>Your Ultimate Destination for Gadgets Galore!</p>
