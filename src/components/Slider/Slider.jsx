@@ -12,8 +12,8 @@ const Slider = ({ findProducts}) => {
   console.log(products);
     return (
         <Swiper 
-      spaceBetween={10}
-      slidesPerView={3}
+      spaceBetween={1}
+      slidesPerView={2.5}
       // onSlideChange={() => console.log('slide change')}
       // onSwiper={(swiper) => console.log(swiper)}
     >

@@ -10,6 +10,7 @@ const AuthProvider = ({children}) => {
     const [loading, setLoading] = useState(true)
     const [name, setName] = useState('')
     const [email, setEmail] = useState('')
+    const [image, setImage] = useState('')
 
     const googleProvider = new GoogleAuthProvider()
 
@@ -41,6 +42,7 @@ const AuthProvider = ({children}) => {
             setLoading(false)
             setName(currentUser.displayName)
             setEmail(currentUser.email)
+            setImage(currentUser.photoURL)
         })
         return () => {
             unsubscribe();
@@ -61,6 +63,7 @@ const AuthProvider = ({children}) => {
         googleLogin,
         name,
         email,
+        image
 
 
 

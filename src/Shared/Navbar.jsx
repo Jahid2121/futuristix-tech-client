@@ -56,26 +56,18 @@ const Navbar = () => {
         </div>
       </label>
       </div></Link>
-        <div className="dropdown">
-            
-            <ul
-              tabIndex={0}
-              className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
-            >
-             <Pages />
-            </ul>
-          </div>
+        
           {
     user ?  <div className="dropdown   pl-36 dropdown-end">
     <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
       <div className="w-10 rounded-full ">
        {
-        image ?  <img className="" src={image } /> : <button className="mt-3">Out</button>
+        <img className="" src={image } />
        }
       </div>
     </label>
     <ul tabIndex={0} className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">
-      <p className="bg-custom-Pink text-xl  text-green-700 rounded-t-xl p-2">{name}</p>
+      <p className="bg-custom-Pink text-xl  text-blue-700 rounded-t-xl p-2">{name}</p>
       <p>{email}</p>
       <li className="bg-custom-Pink-light text-white text-base font-medium  items-center  rounded-sm" onClick={handleLogOut}><button className="p-3 bg-blue-500">Logout</button></li>
     </ul>

@@ -2,6 +2,7 @@
   import { AuthContext } from "../../providers/AuthProvider";
   import { Link } from "react-router-dom";
   import { FaEye, FaEyeSlash } from "react-icons/fa";
+import { updateProfile } from "firebase/auth";
   const SignUp = () => {
     const [error, setError] = useState('')
       const [success, setSuccess] = useState('')
@@ -36,10 +37,18 @@
         return
       }
 
-      createUser(email, password, photo)
+      createUser(email, password)
       .then(result => {
         console.log(result.user);
         setSuccess('User created successfully')
+
+        updateProfile(result.user, {
+          displayName: name,
+          photoURL: photo
+        })
+        .then(() => console.log('Profile updated'))
+        .catch()
+
       } )
       .catch(error => {
         console.error(error);
