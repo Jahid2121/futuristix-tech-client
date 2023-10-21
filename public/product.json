@@ -2,7 +2,13 @@
     {
         "id": 1,
         "brand_name": "Xiaomi",
-        "brand_image": "https://i.ibb.co/NnWp4WD/icons8-xiaomi-480.png"
+        "brand_image": "https://i.ibb.co/NnWp4WD/icons8-xiaomi-480.png",
+        "image":[
+            "",
+            "https://i.ibb.co/xHs9trn/Master-Every-Scene-with-the-Xiaomi-12-Series-Xiaomi-Watch-S1-Series-and-Xiaomi-Buds-3-Series.jpg",
+            "https://i.ibb.co/Lpxwz3R/shiwa-id-kxqgk1l-KSs-Y-unsplash.jpg"
+        ]
+        
         
     },
     {
@@ -14,7 +20,14 @@
     {
         "id": 3,
         "brand_name": "Hp",
-        "brand_image": "https://i.ibb.co/XsWfFQH/icons8-hp-480.png"
+        "brand_image": "https://i.ibb.co/XsWfFQH/icons8-hp-480.png",
+        "image" : [
+            "https://i.ibb.co/4Nkk4b1/Hp-Elitebook-840-G3-Notebook.jpg",
+            "https://i.ibb.co/p01fnnv/0ea802fff0dae7621ff77345dffd91b8.jpg",
+        "https://i.ibb.co/0JHgVRb/cabide-notebook-hp.jpg"
+        ]
+        
+        
         
     },
     {
@@ -23,25 +36,41 @@
         "brand_image": "https://i.ibb.co/QvHFJqL/icons8-asus-512.png",
         "image": [
             "https://i.ibb.co/5Kskfr9/Asus-Laptop.jpg",
-            "https://i.ibb.co/5Kskfr9/Asus-Laptop.jpg",
-            "https://i.ibb.co/k0Khcy2/Laptop-ad.jpg",
-          "https://i.ibb.co/5Kskfr9/Asus-Laptop.jpg"
+            "https://i.ibb.co/VHP1z6m/ASUS-Portable-Solution-ASUS-US.jpg",
+            "https://i.ibb.co/kKnCGmr/GAMING-PC.jpg"
         ]
       },
     {
         "id": 5,
         "brand_name": "Apple",
         "brand_image": "https://i.ibb.co/JkDp9rn/icons8-apple-500.png",
-        "image": "https://i.ibb.co/T8G8P1J/Iphone-15-Pro-Max-Web-Slider-2722.webp"
+        "image": [
+
+            "https://i.ibb.co/T8G8P1J/Iphone-15-Pro-Max-Web-Slider-2722.webp",
+            "https://i.ibb.co/DYtP43M/Apple-Vision-Pro-Advertising-Campaign-CGI.jpg",
+            "https://i.ibb.co/Y3WBNYc/Apple-Pencil-Midnight-Grey-Edition.jpg"
+            
+            
+        ]
         
     },
     {
         "id": 6,
         "brand_name": "Lenovo",
         "brand_image": "https://i.ibb.co/BycgWzz/icons8-lenovo-480.png",
-        "image": "https://i.ibb.co/ZMZsz6y/Lenovo-Legion-5-Pro-82-RF00-DYIN-16-IAH7-H-Price-Specs-12th-Gen-Core-i7-12700-H-Nvidia-RTX-3060-165h.jpg"
+        "image": [
+            "https://i.ibb.co/ZMZsz6y/Lenovo-Legion-5-Pro-82-RF00-DYIN-16-IAH7-H-Price-Specs-12th-Gen-Core-i7-12700-H-Nvidia-RTX-3060-165h.jpg",
+        "https://i.ibb.co/9gsxpqj/60-Creative-and-Clever-Advertisements.jpg",
+        
+        "https://i.ibb.co/vVTcnQw/lenovo-advertising-by-jabedoppsdesign-d869v7g-pre.jpg"
+        
+        ]
     }
 ]
+
+
+
+
 
 
 

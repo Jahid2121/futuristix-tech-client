@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Brand = ({product}) => {
-    const {_id,brand_name,brand_image, image} = product
+    const {_id,brand_name,brand_image} = product
     return (
       <>
         <Link to={`/brandDetails/${brand_name}`}>
