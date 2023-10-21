@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 const NoProduct = () => {
     return (
-        <div className='w-full  text-center mt-16 ml-56'>
+        <div className='md:w-full w-60  text-center md:mt-16 ml-8 md:ml-56'>
             <h2 className="text-3xl font-bold text-gray-400 text-center">Oops!</h2>
             <img className='w-40 flex mx-auto' src={'https://i.ibb.co/x37P2v9/icons8-no-512.png'} alt="" />
             <p className='text-gray-400'>We appreciate your interest in Samsung products! Currently, we do not have any Samsung products available in our inventory. Our selection is regularly updated, so we recommend checking back later to explore the latest Samsung offerings.
