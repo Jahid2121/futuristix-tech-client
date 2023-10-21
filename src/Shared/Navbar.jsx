@@ -35,7 +35,7 @@ const Navbar = () => {
   return (
     <div>
       
-      <div data-aos="fade-down" className="fixed  bg-blue-400  z-10 mt-0 navbar ">
+      <div data-aos="fade-down" className="fixed   bg-blue-400  z-10 mt-0 navbar ">
         <div className="">
           
           <div className="flex">
@@ -48,7 +48,7 @@ const Navbar = () => {
             <Pages />
           </ul>
         </div>
-        <div className="">
+        <div className=" ml-32">
         <Link to='/productsCart'><div className="dropdown dropdown-end">
       <label tabIndex={0} className="btn btn-ghost btn-circle">
         <div className="indicator">
@@ -58,7 +58,7 @@ const Navbar = () => {
       </div></Link>
         
           {
-    user ?  <div className="dropdown   pl-36 dropdown-end">
+    user ?  <div className="dropdown    dropdown-end">
     <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
       <div className="w-10 rounded-full ">
        {

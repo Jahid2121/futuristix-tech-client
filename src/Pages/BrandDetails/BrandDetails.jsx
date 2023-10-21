@@ -4,6 +4,7 @@ import Navbar from "../../Shared/Navbar";
 import Product from "../../components/Product/Product";
 import NoProduct from "../../components/NoProduct/NoProduct";
 import Slider from "../../components/Slider/Slider";
+import Footer from "../../components/Footer/Footer";
 
 const BrandDetails = () => {
   const [advertiseProducts, setAdvertiseProducts] = useState()
@@ -48,6 +49,7 @@ const BrandDetails = () => {
         }
         
     </div>
+    <Footer></Footer>
     </>
   );
 };
