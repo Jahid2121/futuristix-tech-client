@@ -13,7 +13,7 @@ const WhyChooseUs = () => {
                 <p>comprehensive warranty protection for your purchase.</p>
                 </div>
 
-                <div className='mt-10 p-6 relative bg-teal-500 shadow-xl '>
+                <div className='mt-10 p-6 relative bg-blue-500 shadow-xl '>
                 <img className='p-2 mx-auto' src={transit} alt="" />
                 <h2 className='text-xl text-white font-medium'>FAST AND FREE SHIPPING </h2>
                 <p className='text-white'>Fast and Free Shipping worldwide ! </p>
