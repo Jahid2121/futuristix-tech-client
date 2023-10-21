@@ -35,8 +35,8 @@ const Navbar = () => {
   return (
     <div>
       
-      <div data-aos="fade-down" className="fixed ml-10 z-10 mt-0  ">
-        <div className="bg-blue-500 navbar">
+      <div className="fixed   z-10 mt-0  ">
+        <div className="bg-blue-500 md:mr-[185px] mr-16 navbar">
         <div className="">
         <div className="dropdown">
       <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -52,16 +52,16 @@ const Navbar = () => {
     </div>
           
           <div className="flex">
-        <img className="w-10 text-white" src={logo} alt="" />
-        <h3 className="text-2xl text-white font-bold mr-16">FUTURISTIX</h3>
+        <img className="md:w-10 w-8 text-white" src={logo} alt="" />
+        <h3 className="md:text-2xl text-xl text-white font-bold md:mr-16">FUTURISTIX</h3>
       </div>
         </div>
-        <div className="navbar-center hidden mr-36 lg:flex">
+        <div className="navbar-center hidden md:mr-36 lg:flex">
           <ul className="menu   menu-horizontal px-1">
             <Pages />
           </ul>
         </div>
-        <div className=" ml-32">
+        <div className=" md:ml-32">
         <Link to='/productsCart'><div className="dropdown dropdown-end">
       <label tabIndex={0} className="btn btn-ghost btn-circle">
         <div className="indicator">
@@ -71,9 +71,9 @@ const Navbar = () => {
       </div></Link>
         
           {
-    user ?  <div className="dropdown    dropdown-end">
+    user ?  <div className="dropdown   relative  dropdown-end">
     <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
-      <div className="w-10 rounded-full ">
+      <div className="lg:w-10 rounded-full ">
        {
         <img className="" src={image } />
        }
