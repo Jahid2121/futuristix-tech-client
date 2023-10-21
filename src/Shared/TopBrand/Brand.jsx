@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Brand = ({product}) => {
-    const {_id,brand_name, image} = product
+    const {_id,brand_name,brand_image, image} = product
     return (
       <>
         <Link to={`/brandDetails/${brand_name}`}>
@@ -10,7 +10,7 @@ const Brand = ({product}) => {
             <div className="card static z-0 glass">
         <figure>
           <img className="w-32"
-            src={image}
+            src={brand_image}
             alt={`brand_name`}
           />
         </figure>

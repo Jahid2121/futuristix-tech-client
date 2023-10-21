@@ -7,7 +7,9 @@ import 'swiper/css';
 
 
 
-const Slider = ({Brand}) => {
+const Slider = ({ findProducts}) => {
+  const products = findProducts?.find(product => product)
+  console.log(products);
     return (
         <Swiper 
       spaceBetween={10}
@@ -15,12 +17,11 @@ const Slider = ({Brand}) => {
       // onSlideChange={() => console.log('slide change')}
       // onSwiper={(swiper) => console.log(swiper)}
     >
-
       {
-        
-            Brand?.map(product => <SwiperSlide data-aos="fade-left" key={product._id} product={product}><img className='w-80 h-64' src={product.image} alt="" /></SwiperSlide>)
-          
+        products?.image.map((img,idx) => <SwiperSlide  key={idx}><img className='w-80 h-64' src={img} alt="" /></SwiperSlide>)
       }
+
+      
      
      <p className='text-center'> ...</p>
     </Swiper>

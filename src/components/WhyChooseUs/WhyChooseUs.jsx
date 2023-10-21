@@ -23,6 +23,7 @@ const WhyChooseUs = () => {
                 <img src={verified} alt="" />
                 <h2 className='text-xl font-medium'>AUTHENTIC PRODUCT</h2>
                 <p>  only genuine, original products sourced for your satisfaction. </p>
+                
                 </div>
             </div>
         </div>

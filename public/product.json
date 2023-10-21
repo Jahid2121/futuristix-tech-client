@@ -2,32 +2,44 @@
     {
         "id": 1,
         "brand_name": "Xiaomi",
-        "image": "https://i.ibb.co/NnWp4WD/icons8-xiaomi-480.png"
+        "brand_image": "https://i.ibb.co/NnWp4WD/icons8-xiaomi-480.png"
+        
     },
     {
         "id": 2,
         "brand_name": "Samsung",
-        "image": "https://i.ibb.co/xff5vNn/icons8-samsung-480.png"
+        "brand_image": "https://i.ibb.co/xff5vNn/icons8-samsung-480.png"
+        
     },
     {
         "id": 3,
         "brand_name": "Hp",
-        "image": "https://i.ibb.co/XsWfFQH/icons8-hp-480.png"
+        "brand_image": "https://i.ibb.co/XsWfFQH/icons8-hp-480.png"
+        
     },
     {
         "id": 4,
         "brand_name": "Asus",
-        "image": "https://i.ibb.co/QvHFJqL/icons8-asus-512.png"
-    },
+        "brand_image": "https://i.ibb.co/QvHFJqL/icons8-asus-512.png",
+        "image": [
+            "https://i.ibb.co/5Kskfr9/Asus-Laptop.jpg",
+            "https://i.ibb.co/5Kskfr9/Asus-Laptop.jpg",
+            "https://i.ibb.co/k0Khcy2/Laptop-ad.jpg",
+          "https://i.ibb.co/5Kskfr9/Asus-Laptop.jpg"
+        ]
+      },
     {
         "id": 5,
         "brand_name": "Apple",
-        "image": "https://i.ibb.co/JkDp9rn/icons8-apple-500.png"
+        "brand_image": "https://i.ibb.co/JkDp9rn/icons8-apple-500.png",
+        "image": "https://i.ibb.co/T8G8P1J/Iphone-15-Pro-Max-Web-Slider-2722.webp"
+        
     },
     {
         "id": 6,
         "brand_name": "Lenovo",
-        "image": "https://i.ibb.co/BycgWzz/icons8-lenovo-480.png"
+        "brand_image": "https://i.ibb.co/BycgWzz/icons8-lenovo-480.png",
+        "image": "https://i.ibb.co/ZMZsz6y/Lenovo-Legion-5-Pro-82-RF00-DYIN-16-IAH7-H-Price-Specs-12th-Gen-Core-i7-12700-H-Nvidia-RTX-3060-165h.jpg"
     }
 ]
 

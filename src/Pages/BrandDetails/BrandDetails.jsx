@@ -12,7 +12,6 @@ const BrandDetails = () => {
   const products = useLoaderData();
   const Brand = products?.filter((data) => data.brandName.toLowerCase() === brand_name.toLowerCase());
   const findProducts = advertiseProducts?.filter((data) => data.brand_name.toLowerCase() === brand_name.toLowerCase())
-  console.log(findProducts);
   useEffect(() => {
     fetch("/product.json")
     .then(res => res.json())
@@ -34,7 +33,7 @@ const BrandDetails = () => {
     
       }
       {
-        (brand_name === 'Samsung') || <Slider Brand={Brand}></Slider>
+        (brand_name === 'Samsung') || <Slider findProducts={findProducts}></Slider>
       }
       
       </div>
