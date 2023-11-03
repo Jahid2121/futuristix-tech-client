@@ -1,15 +1,18 @@
 import React from 'react';
-import bannerImg from '../assets/hector-martinez-EG49vTtKdvI-unsplash.jpg'
 import { Link } from 'react-router-dom';
 const Banner = () => {
     return (
-        <div  className=''>
-            <img className='w-[390px]  md:w-full mx-auto' src={bannerImg} alt="" />
-            <div className='md:-mt-[600px] -mt-40 mb-20 md:mb-72 w-40 text-center'>
-            <h2 className=' font-bold  text-sm md:text-5xl w-40 ml-80 flex  md:w-full md:mb-4 text-[#F1EFEF]'>Shop the Latest Gadgets, <br /> Explore Limitless Possibilities!</h2>
-            <Link to={'/Add Product'}><button className='relative md:ml-[420px] mt-3 btn bg-blue-600 border-0 text-white'>Add Product</button></Link>
-            </div>
-        </div>
+
+        <div className="hero min-h-screen" style={{backgroundImage: 'url(https://i.ibb.co/JCJZR5F/hector-martinez-EG49v-Tt-Kdv-I-unsplash.jpg)'}}>
+  <div className="hero-overlay bg-opacity-60"></div>
+  <div className="hero-content text-center text-neutral-content">
+    <div className="max-w-md">
+      <h1 className=" font-bold  text-sm md:text-5xl w-40 md:w-full  md:mb-4 text-[#F1EFEF]">Shop the Latest Gadgets, <br /> Explore Limitless Possibilities!</h1>
+     
+      <Link to={'/Add Product'}><button className="btn btn-primary">Add Product</button></Link>
+    </div>
+  </div>
+</div>
     );
 };
 
