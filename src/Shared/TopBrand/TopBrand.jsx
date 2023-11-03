@@ -12,6 +12,7 @@ const TopBrand = ({products}) => {
             products?.map(product => <Brand key={product.id} product={product}></Brand>)
         }
       </div>
+
     </div>
     </>
   );
