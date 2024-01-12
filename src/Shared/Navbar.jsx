@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import logo from "../assets/icons8-technology-64.png";
+import logo from "../assets/icons8-circuit-80.png";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../providers/AuthProvider";
 
@@ -12,9 +12,8 @@ const Pages = () => {
         <NavLink className="mr-4"  style={({ isActive }) => {
     return {
       fontWeight: isActive ? "bold" : "",
-      color: isActive ? "" : "",
-      backgroundColor: isActive ? "#3876BF" : "",
-      textDecoration: isActive ? "underline" : "",
+      color: isActive ? "customBlue" : "",
+
     };
   }} to={`/${link}`}>{link}</NavLink>
       </li>)
@@ -36,7 +35,7 @@ const Navbar = () => {
     <div>
       
       <div className="fixed   z-10 mt-0  ">
-        <div data-aos="fade-down" className="bg-blue-500 md:mr-[185px]  navbar">
+        <div data-aos="fade-down" className="bg-white  font-bold md:mr-[185px]  navbar">
         <div className="">
         <div className="dropdown">
       <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -52,7 +51,7 @@ const Navbar = () => {
     </div>
           
           <div className="flex">
-        <img className="md:w-10 w-8 text-white" src={logo} alt="" />
+        <img className="md:w-10 w-8 text-customBlue" src={logo} alt="" />
         <h3 className="md:text-2xl text-xl text-white font-bold md:mr-16">FUTURISTIX</h3>
       </div>
         </div>
