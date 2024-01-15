@@ -2,25 +2,8 @@ import React, { useContext } from "react";
 import logo from "../assets/icons8-circuit-80.png";
 import { Link, NavLink } from "react-router-dom";
 import { AuthContext } from "../providers/AuthProvider";
+import CustomNavlink from "../components/CustomNavlink";
 
-const Pages = () => {
-  const links = ['Home', 'Add Product']
-  return (
-    <>
-    {
-      links.map(link => <li key={link}>
-        <NavLink className="mr-4"  style={({ isActive }) => {
-    return {
-      fontWeight: isActive ? "bold" : "",
-      color: isActive ? "customBlue" : "",
-
-    };
-  }} to={`/${link}`}>{link}</NavLink>
-      </li>)
-    }
-    </>
-  )
-}
 
 const Navbar = () => {
   const {user, logOut, name, email,image} = useContext(AuthContext)
@@ -42,7 +25,8 @@ const Navbar = () => {
         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
       </label>
       <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
-        <Pages />
+        <CustomNavlink to={'/'} display={'Home'} />
+        <CustomNavlink to={'/addProduct'} display={'Add Product'} />
       {/* {
         user ? <li className="bg-custom-Pink-light text-white text-base font-medium  items-center  rounded-sm" onClick={handleLogOut}><button className="p-3 bg-blue-500">Logout</button></li> : <Link to="/login"><button className="bg-blue-500  p-2 rounded-xl text-white">Login</button></Link>
       } */}
@@ -57,7 +41,8 @@ const Navbar = () => {
         </div>
         <div className="navbar-center hidden md:mr-36 lg:flex">
           <ul className="menu   menu-horizontal px-1">
-            <Pages />
+          <CustomNavlink to={'/'} display={'Home'} />
+          <CustomNavlink to={'/addProduct'} display={'Add Product'} />
           </ul>
         </div>
         <div className=" md:ml-32">

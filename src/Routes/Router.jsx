@@ -23,21 +23,17 @@ const router = createBrowserRouter([
       children: [
         {
             path: '/',
-            element: <Navigate to="/home" replace />
-        },
-        {
-            path: '/home',
             element: <Home></Home>,
-            loader:() => fetch('product.json')
+            loader:() => fetch('https://futuristix-tech-server.vercel.app/brands')
         },
         {
-            path: '/add Product',
+            path: '/addProduct',
             element: <PrivateRoutes><AddProduct></AddProduct></PrivateRoutes>
         },
         {
             path: '/updateProduct/:id',
             element: <PrivateRoutes><UpdateProduct></UpdateProduct></PrivateRoutes>,
-            loader: ({params}) => fetch(`https://futuristix-tech-server-5fldsw6yr-jahid2121s-projects.vercel.app/products/${params.id}`)
+            loader: ({params}) => fetch(`https://futuristix-tech-server.vercel.app/products/${params.id}`)
         },
         {
             path: '/signUp',
@@ -46,17 +42,17 @@ const router = createBrowserRouter([
         {
           path: '/brandDetails/:brand_name',
           element: <BrandDetails></BrandDetails>,
-          loader: () => fetch('https://futuristix-tech-server-5fldsw6yr-jahid2121s-projects.vercel.app/products')
+          loader: () => fetch('https://futuristix-tech-server.vercel.app/products')
         },
         {
           path: '/products/:id',
           element: <PrivateRoutes><ProductDetails></ProductDetails></PrivateRoutes>,
-          loader: ({params}) => fetch(`https://futuristix-tech-server-5fldsw6yr-jahid2121s-projects.vercel.app/products/${params.id}`)
+          loader: ({params}) => fetch(`https://futuristix-tech-server.vercel.app/products/${params.id}`)
         },
         {
           path: '/productsCart',
           element: <PrivateRoutes><Cart></Cart></PrivateRoutes> ,
-          loader: () => fetch('https://futuristix-tech-server-5fldsw6yr-jahid2121s-projects.vercel.app/cartProducts')
+          loader: () => fetch('https://futuristix-tech-server.vercel.app/cartProducts')
         },
         {
           path: '/login',

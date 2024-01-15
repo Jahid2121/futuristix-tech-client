@@ -1,6 +1,6 @@
 import React, { useContext, useState } from "react";
 import { AuthContext } from "../../providers/AuthProvider";
-import logo from "../../assets/icons8-technology-64.png";
+import logo from "../../assets/icons8-circuit-80.png";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AiOutlineGoogle } from "react-icons/ai";
 const Login = () => {

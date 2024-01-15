@@ -2,6 +2,7 @@ import React from "react";
 import Brand from "./Brand";
 
 const TopBrand = ({products}) => {
+  console.log(products);
   return (
     <>
     <div data-aos="fade-up" className="text-center mt-32 ">
