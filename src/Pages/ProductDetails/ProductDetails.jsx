@@ -9,7 +9,7 @@ const ProductDetails = () => {
     product;
 
     const handleAddToCart = product => {
-      fetch('https://futuristix-tech-server-5fldsw6yr-jahid2121s-projects.vercel.app/cartProducts', {
+      fetch('https://futuristix-tech-server.vercel.app/cartProducts', {
         method: 'POST',
         headers: {
           'content-type': 'application/json'

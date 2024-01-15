@@ -23,8 +23,7 @@ const router = createBrowserRouter([
       children: [
         {
             path: '/',
-            element: <Home></Home>,
-            loader:() => fetch('https://futuristix-tech-server.vercel.app/brands')
+            element: <Home></Home>
         },
         {
             path: '/addProduct',

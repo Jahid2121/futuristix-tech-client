@@ -5,16 +5,17 @@ import Product from "../../components/Product/Product";
 import NoProduct from "../../components/NoProduct/NoProduct";
 import Slider from "../../components/Slider/Slider";
 import Footer from "../../components/Footer/Footer";
+import useProducts from "../../hooks/useProducts";
 
 const BrandDetails = () => {
   const [advertiseProducts, setAdvertiseProducts] = useState()
   const { brand_name } = useParams();
   
-  const products = useLoaderData();
+  const [products] = useProducts();
   const Brand = products?.filter((data) => data.brandName.toLowerCase() === brand_name.toLowerCase());
   const findProducts = advertiseProducts?.filter((data) => data.brand_name.toLowerCase() === brand_name.toLowerCase())
   useEffect(() => {
-    fetch("/product.json")
+    fetch("/https://futuristix-tech-server.vercel.app/products")
     .then(res => res.json())
     .then(data => setAdvertiseProducts(data))
   },[])

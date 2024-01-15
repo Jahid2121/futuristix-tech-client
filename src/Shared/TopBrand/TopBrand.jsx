@@ -1,7 +1,9 @@
 import React from "react";
 import Brand from "./Brand";
+import useBrands from "../../hooks/useBrands";
 
-const TopBrand = ({products}) => {
+const TopBrand = () => {
+  const [products] = useBrands()
   console.log(products);
   return (
     <>
